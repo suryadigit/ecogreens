@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1021925161518",
+    "project_id": "ecogreens-2f3d5",
+    "storage_bucket": "ecogreens-2f3d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021925161518:android:e29c59b2a9ef87ae003dbf",
+        "android_client_info": {
+          "package_name": "com.example.ecogreeens"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9XkJ6rtPZcDry_6mgn2YI0xxXKTVOWdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021925161518:android:9d79076d6a572471003dbf",
+        "android_client_info": {
+          "package_name": "com.example.ecogreens"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9XkJ6rtPZcDry_6mgn2YI0xxXKTVOWdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

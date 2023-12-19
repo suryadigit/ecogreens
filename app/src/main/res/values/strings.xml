@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ecogreeens</string>
+    <string name="login">Login</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password\n</string>
+    <string name="btn_login">Login</string>
+    <string name="Konfirmasi_Password">Konfirmasi Password</string>
+    <string name="btn_register">Register</string>
+    <string name="description">Image</string>
+    <string name="image">Image\n</string>
+    <string name="register">Register</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="masukkan_email">Masukkan email</string>
+    <string name="masukkan_password">Masukkan password</string>
+    <string name="lupa_password">Lupa Password</string>
+    <string name="daftar">Daftar</string>
+    <string name="text_register">Belum memiliki akun?</string>
+    <string name="text_login">Sudah punya akun?</string>
+    <string name="username">Username</string>
+    <string name="terms">I gree to the</string>
+    <string name="termsofservices">Terms of Services</string>
+    <string name="textprivacy">Privacy Policy.</string>
+    <string name="textagree">I gree to the</string>
+    <string name="textand">and\n</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terima_dan_lanjutkan">Terima dan Lanjutkan</string>
+    <string name="syarat_dan_ketentuan">Syarat dan Ketentuan</string>
+    <string name="terima_dan_lanjutkans">Terima dan Lanjutkan</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="email_reset_password">Masukkan Email</string>
+    <string name="terms_of">
+        Syarat dan Ketentua
+
+Silakan baca dan pahami ketentuan di bawah ini untuk mengetahui hak dan tanggung jawab Anda sebagai pengguna aplikasi monitoring elektronik ini.
+
+Sebelum menggunakan aplikasi ini lebih lanjut, diharapkan Anda membaca dan memahami sepenuhnya syarat dan ketentuan yang berlaku. Syarat dan ketentuan ini mengatur penggunaan aplikasi, layanan, dan isi yang disediakan oleh aplikasi ini. Dengan mengakses atau menggunakan aplikasi ini, Anda dianggap telah memahami, menyetujui, serta tunduk pada semua syarat dan ketentuan yang tertera.
+
+Definisi:
+Dalam konteks syarat dan ketentuan ini, setiap kata atau frasa memiliki arti sebagai berikut, kecuali dinyatakan lain secara tegas:
+
+"Kami" merujuk kepada pengembang dan pemilik aplikasi monitoring elektronik ini.
+"Anda" mengacu pada pengguna aplikasi ini.
+"Layanan" mencakup semua informasi, fitur, dan layanan yang disediakan oleh aplikasi.
+"Pengguna" merujuk kepada individu yang menggunakan layanan dan fitur aplikasi ini, termasuk Pengguna Terdaftar dan Pengguna Tidak Terdaftar.
+"Pengguna Terdaftar" adalah individu yang telah mendaftar dan memiliki akun di dalam aplikasi ini.
+"Pihak Ketiga" mencakup individu atau entitas lain yang bukan merupakan bagian dari pengembang aplikasi ini.
+"Profil" adalah informasi pribadi yang digunakan oleh pengguna aplikasi sebagai data dasar.
+Layanan dan Fitur:
+Informasi yang disediakan oleh aplikasi ini merupakan informasi umum yang ditampilkan sesuai keadaan terkini. Meskipun kami berupaya menyediakan informasi yang terkini dan akurat, kami tidak menjamin kelengkapan, akurasi, atau relevansi informasi tersebut dengan kebutuhan individu.
+
+Aplikasi ini bertujuan untuk membantu pengguna dalam memantau aktivitas elektronik. Keputusan yang diambil berdasarkan informasi dalam aplikasi menjadi tanggung jawab pribadi pengguna.
+ </string>
+
+
+    <string name="privacy">
+Penggunaan Aplikasi:
+Dengan melanjutkan penggunaan aplikasi ini, Anda menyatakan dan menjamin bahwa:
+
+Anda menggunakan aplikasi ini untuk keperluan pribadi.
+Anda tidak akan menggunakan aplikasi ini untuk kegiatan yang dapat merugikan, merugikan reputasi, atau melanggar privasi pihak lain.
+Tidak melakukan tindakan yang melanggar hukum atau bersifat penipuan.
+Anda tidak akan melanggar hak kekayaan intelektual pihak lain atau mengganggu sistem aplikasi.
+Kami tidak bertanggung jawab atas masalah teknis yang menyebabkan gangguan dalam penggunaan aplikasi ini. Kami juga tidak bertanggung jawab atas kerugian yang timbul dari penggunaan aplikasi ini.
+
+    </string>
+    <string name="title_activity_forget_password">Reset Password</string>
+    <string name="back_button_description">icon back\n</string>
+    <string name="text_reset">Masukkan email yang akan anda gunakan untuk Mereset password.</string>
+    <string name="hitung_daya">Hitung Daya</string>
+    <string name="hasil_perhitungan">Rp.</string>
+    <string name="masukkan_daya_listrik_atau_konsumsi_listrik_kwh">Masukkan daya listrik atau konsumsi listrik (kWh)</string>
+    <string name="masukkan_harga_yang_anda_bayar_untuk_1_kwh_listrik_rupiah">Masukkan harga yang anda bayar untuk 1 kWh listrik (rupiah)</string>
+    <string name="berapa_jam_per_hari_atau_per_minggu_mesin_bekerja">Berapa jam per hari atau per minggu mesin bekerja?</string>
+    <string name="masukkan_daya_listrik_kwh">Masukkan Daya Listrik (kwh)</string>
+    <string name="harga_1_kwh_listrik_rp">Harga 1kwh Listrik (Rp)</string>
+    <string name="berapa_jam_perhari">Penggunaan Perhari(Jam)</string>
+
+
+</resources>
