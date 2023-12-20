@@ -7,10 +7,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.RadioButton
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -35,8 +37,14 @@ class HitungDaya : AppCompatActivity() {
         backButton.setOnClickListener {
             onBackPressed()
         }
-    }
+        // Inisialisasi Spinner
+        val spinner: Spinner = findViewById(R.id.tarifListrikSpinner)
+        val options = arrayOf("900VA", "1300VA")
 
+        // Set adapter untuk Spinner
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, options)
+        spinner.adapter = adapter
+    }
     private fun logoutUser() {
         auth.signOut()
 
@@ -54,16 +62,17 @@ class HitungDaya : AppCompatActivity() {
         val editTextTarifKwh = findViewById<EditText>(R.id.editTextTarifKwh)
         val editTextDurasi = findViewById<EditText>(R.id.editTextDurasi)
         val hasilTextView = findViewById<TextView>(R.id.hasilTextView)
-        val tarif900vaRadioButton = findViewById<RadioButton>(R.id.tarif900vaRadioButton)
+        val tarifListrikSpinner = findViewById<Spinner>(R.id.tarifListrikSpinner)
 
         val dayaListrik = editTextDayaListrik.text.toString().toDoubleOrNull() ?: 0.0
         val tarifPerKwh = editTextTarifKwh.text.toString().toDoubleOrNull() ?: 0.0
         val durasiPemakaian = editTextDurasi.text.toString().toDoubleOrNull() ?: 0.0
+        val selectedTarif = tarifListrikSpinner.selectedItem.toString()
 
         val biayaPerHari: Double
         val biayaTotal: Double
 
-        if (tarif900vaRadioButton.isChecked) {
+        if (selectedTarif == "900VA") {
             biayaPerHari = dayaListrik * tarifPerKwh
             biayaTotal = biayaPerHari * durasiPemakaian
         } else {
@@ -76,14 +85,15 @@ class HitungDaya : AppCompatActivity() {
         hasilTextView.text = "Biaya Listrik Per Hari: $biayaTotal rupiah"
 
         isCalculated = true
+    }
 
-}
+    @SuppressLint("WrongViewCast")
     fun simpanHasil(view: View) {
         val editTextDayaListrik = findViewById<EditText>(R.id.editTextDayaListrik)
         val editTextTarifKwh = findViewById<EditText>(R.id.editTextTarifKwh)
         val editTextDurasi = findViewById<EditText>(R.id.editTextDurasi)
         val hasilTextView = findViewById<TextView>(R.id.hasilTextView)
-        val tarif900vaRadioButton = findViewById<RadioButton>(R.id.tarif900vaRadioButton)
+        findViewById<RadioButton>(R.id.tarifListrikSpinner)
 
         val dayaListrik = editTextDayaListrik.text.toString()
         val tarifPerKwh = editTextTarifKwh.text.toString()

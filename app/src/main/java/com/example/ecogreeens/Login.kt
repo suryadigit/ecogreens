@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import android.view.View
+import android.widget.FrameLayout
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import android.window.SplashScreen
@@ -69,17 +71,23 @@ class Login : AppCompatActivity() {
     }
 
     private fun showLoading(show: Boolean) {
-        val progressBar = binding.progressBar
-        progressBar.visibility = if (show) View.VISIBLE else View.GONE
-    }
+        val loadingOverlay: FrameLayout = findViewById(R.id.loadingOverlay)
+        val progressBar: ProgressBar = findViewById(R.id.progressBar)
 
-    override fun onStart() {
-        super.onStart()
+        if (show) {
+            loadingOverlay.visibility = View.VISIBLE
+            // Atur progressBar atau animasi loading lainnya di sini jika diperlukan
+        } else {
+            loadingOverlay.visibility = View.GONE
+            // Sembunyikan progressBar atau animasi loading lainnya di sini jika diperlukan
+        }
+        fun onStart() {
+            super.onStart()
 
-        if (firebaseAuth.currentUser != null) {
-            val intent = Intent(this, Dashboard::class.java)
-            startActivity(intent)
+            if (firebaseAuth.currentUser != null) {
+                val intent = Intent(this, Dashboard::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
-

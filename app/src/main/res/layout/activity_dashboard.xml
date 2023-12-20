@@ -8,20 +8,8 @@
     tools:context="Dashboard"
     tools:ignore="ExtraText">
 
-    <TextView
-        android:id="@+id/defaultText"
-        android:layout_width="127dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="208dp"
-        android:text="@string/email"
-        android:textColor="@color/black"
-        android:textSize="60dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnHitung"
         android:layout_width="154dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -32,6 +20,21 @@
         android:text="hitung"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="276dp"
+        android:onClick="logoutUser"
+        android:text="Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -53,11 +56,6 @@
             android:layout_width="154dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/history"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:onClick="logoutUser"
             android:text="Logout"
             tools:ignore="MissingConstraints" />

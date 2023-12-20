@@ -69,6 +69,12 @@
             android:theme="@style/Theme.Material3.Light.NoActionBar"
             android:exported="false" >
         </activity>
+        <activity
+            android:name=".Profile"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" >
+        </activity>
+
     </application>
 
 </manifest>

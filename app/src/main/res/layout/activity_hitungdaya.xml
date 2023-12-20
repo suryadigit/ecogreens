@@ -27,7 +27,6 @@
         android:textSize="17sp"
         android:layout_toEndOf="@id/backButton" />
 
-
     <TextView
         android:id="@+id/defaultTextkonsumsi"
         android:layout_width="377dp"
@@ -49,7 +48,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="62dp"
         android:layout_marginEnd="16dp">
-
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextDayaListrik"
@@ -73,6 +71,7 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutTarifKwh"
         android:layout_width="match_parent"
@@ -124,27 +123,13 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <RadioGroup
-        android:id="@+id/tarifListrikRadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Spinner
+        android:id="@+id/tarifListrikSpinner"
+        android:layout_width="377dp"
+        android:layout_height="58dp"
         android:layout_below="@id/textInputLayoutDurasi"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/tarif900vaRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="900VA"
-            android:checked="true" />
-
-        <RadioButton
-            android:id="@+id/tarif1300vaRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1300VA" />
-    </RadioGroup>
+        style="@style/LoginTextInputInnerFieldStyle"/>
 
     <Button
         android:layout_width="401dp"

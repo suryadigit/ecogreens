@@ -28,4 +28,5 @@
         <item name="android:textSize">14sp</item>
         <item name="android:singleLine">true</item>
     </style>
+
 </resources>

@@ -75,6 +75,7 @@ Kami tidak bertanggung jawab atas masalah teknis yang menyebabkan gangguan dalam
     <string name="masukkan_daya_listrik_kwh">Masukkan Daya Listrik (kwh)</string>
     <string name="harga_1_kwh_listrik_rp">Harga 1kwh Listrik (Rp)</string>
     <string name="berapa_jam_perhari">Penggunaan Perhari(Jam)</string>
+    <string name="profile_image_description">Profile\n</string>
 
 
 </resources>
