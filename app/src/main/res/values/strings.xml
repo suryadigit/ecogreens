@@ -76,6 +76,16 @@ Kami tidak bertanggung jawab atas masalah teknis yang menyebabkan gangguan dalam
     <string name="harga_1_kwh_listrik_rp">Harga 1kwh Listrik (Rp)</string>
     <string name="berapa_jam_perhari">Penggunaan Perhari(Jam)</string>
     <string name="profile_image_description">Profile\n</string>
+    <string name="hitung">Hitung</string>
+    <string name="profile">Profile</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="beranda">Beranda</string>
+    <string name="logout_button_description">Logout\n</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="History">History</string>
 
 
 </resources>

@@ -25,7 +25,7 @@ class Register : AppCompatActivity() {
         binding.textView.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
         binding.button.setOnClickListener {

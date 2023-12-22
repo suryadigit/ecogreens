@@ -16,6 +16,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.api.ResourceDescriptor
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -44,6 +45,24 @@ class HitungDaya : AppCompatActivity() {
         // Set adapter untuk Spinner
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, options)
         spinner.adapter = adapter
+
+        // Initialize buttons
+        val homeButton: ImageButton = findViewById(R.id.homeButton)
+        val historyButton: ImageButton = findViewById(R.id.historyButton)
+        val profileButton: ImageButton = findViewById(R.id.profilebtn)
+
+        homeButton.setOnClickListener {
+            goToDasboard()
+        }
+        // Set click listener for historyButton
+        historyButton.setOnClickListener {
+            goToHistory()
+        }
+
+        // Set click listener for profileButton
+        profileButton.setOnClickListener {
+            openProfile()
+        }
     }
     private fun logoutUser() {
         auth.signOut()
@@ -100,10 +119,15 @@ class HitungDaya : AppCompatActivity() {
         val durasiPemakaian = editTextDurasi.text.toString()
         val hasilPerhitungan = hasilTextView.text.toString()
 
+
         // Mendapatkan UID pengguna saat ini
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
 
+        if (!isCalculated) {
+            Toast.makeText(this, "Mohon hitung biaya terlebih dahulu", Toast.LENGTH_SHORT).show()
+            return
+        }
         // Lakukan validasi di sini, memastikan semua field terisi dan ada UID pengguna
         if (isCalculated && uid != null && dayaListrik.isNotEmpty() && tarifPerKwh.isNotEmpty() && durasiPemakaian.isNotEmpty() && hasilPerhitungan.isNotEmpty()) {
 
@@ -139,6 +163,20 @@ class HitungDaya : AppCompatActivity() {
             // Tampilkan pesan kepada pengguna bahwa semua field harus diisi
             Toast.makeText(this, "Periksa data dan hasilnya", Toast.LENGTH_SHORT).show()
         }
+
+
+    }
+    private fun goToHistory() {
+        val intent = Intent(this, History::class.java)
+        startActivity(intent)
+    }
+    private fun goToDasboard() {
+        val intent = Intent(this, Dashboard::class.java)
+        startActivity(intent)
+    }
+    private fun openProfile() {
+        val intent = Intent(this, Profile::class.java)
+        startActivity(intent)
     }
 
 }

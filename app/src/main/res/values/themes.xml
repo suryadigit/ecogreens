@@ -29,4 +29,16 @@
         <item name="android:singleLine">true</item>
     </style>
 
+    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <!-- Warna latar belakang -->
+        <item name="android:background">@color/white</item>
+        <!-- Warna item yang aktif -->
+        <item name="itemTextColor">@color/black</item>
+        <!-- Warna item yang dipilih -->
+        <item name="itemIconTint">@color/blue</item>
+    </style>
+
+
+
+
 </resources>

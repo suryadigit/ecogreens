@@ -1,5 +1,6 @@
 package com.example.ecogreeens
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.text.SpannableString
@@ -9,7 +10,6 @@ import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import android.window.SplashScreen
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecogreeens.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -26,10 +26,18 @@ class Login : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        // Cek apakah pengguna sudah login sebelumnya
+        if (firebaseAuth.currentUser != null) {
+            // Pengguna sudah login, arahkan ke halaman Dashboard
+            val intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+            finish() // Tidak perlu kembali ke halaman login
+        }
+
         binding.textView.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
         // Di bagian onClickListener untuk tombol Register
@@ -80,14 +88,6 @@ class Login : AppCompatActivity() {
         } else {
             loadingOverlay.visibility = View.GONE
             // Sembunyikan progressBar atau animasi loading lainnya di sini jika diperlukan
-        }
-        fun onStart() {
-            super.onStart()
-
-            if (firebaseAuth.currentUser != null) {
-                val intent = Intent(this, Dashboard::class.java)
-                startActivity(intent)
-            }
         }
     }
 }
